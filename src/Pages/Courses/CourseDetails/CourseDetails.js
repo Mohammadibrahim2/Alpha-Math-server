@@ -18,7 +18,7 @@ return(
         <Card.Text>
          <p>{details}</p>
         </Card.Text>
-        <Button >For more Details</Button>
+        <Button >more information</Button>
       </Card.Body>
     </Card>
 
