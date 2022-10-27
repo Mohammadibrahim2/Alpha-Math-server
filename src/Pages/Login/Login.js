@@ -68,7 +68,7 @@ const navigate=useNavigate()
 return(
     <div>
         
-        <Form  onSubmit={handleSubmit}style={{backgroundColor:"#54B435",padding:"20px"}}>
+        <Form  className="w-50 mx-auto" onSubmit={handleSubmit}style={{backgroundColor:"#54B435",padding:"20px"}}>
         <Form.Text className="text-light text-center">
           <h1>Log in</h1>
         </Form.Text>

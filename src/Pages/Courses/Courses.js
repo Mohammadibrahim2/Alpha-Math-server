@@ -16,9 +16,11 @@ import Catagory from "./Catagory/Catagory";
       <Row>
 
     <Col lg="9">
+    <h1 className="text-center my-4"style={{color:"#54B435"}}>Courses</h1>
 
     <div className="container text-center">
-  <div className="row row-cols-lg-2 row-cols-1">
+  <div className="row row-cols-lg-2 row-cols-1 ">
+    
      {
     courses.map(course=><Catagory
     key={course.id}
@@ -33,17 +35,20 @@ import Catagory from "./Catagory/Catagory";
      
      </Col>
         <Col lg="3" className="text-center">
+          <div>
+       <ListGroup.Item className="my-4 "style={{backgroundColor:"#fff",color:"#54B435",border:"1px solid #54B435"}}><h2>Category</h2> </ListGroup.Item>
+
         
          {
            courses.map(course=>
        <ListGroup>
       <ListGroup.Item className="mb-2 "style={{backgroundColor:"#54B435"}}>
-           <Link className="text-white text-decoration-none " to={`/course-details/${course.id}`}>{course.name}</Link>
-           </ListGroup.Item>
+        <Link className="text-white text-decoration-none " to={`/course-details/${course.id}`}>{course.name}</Link>
+      </ListGroup.Item>
     </ListGroup>)
           }
       
-         
+         </div>
         </Col>
        
       </Row>

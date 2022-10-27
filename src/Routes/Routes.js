@@ -9,6 +9,7 @@ import Courses from "../Pages/Courses/Courses";
 import CourseDetails from "../Pages/Courses/CourseDetails/CourseDetails";
 import PrivateRoute from "../Pages/Private/PrivateRoute";
 import FAQ from "../Pages/FAQ/FAQ";
+import GetPremium from "../Pages/Courses/GetPremiumPage/GetPremium";
 
 
 
@@ -50,6 +51,11 @@ export const routes=createBrowserRouter([
             element:<CourseDetails></CourseDetails>,
             loader:({params})=>fetch(`http://localhost:5000/courseDetails/${params.id}`)
            },
+           {
+            path:"/getPremium",
+            element:<PrivateRoute><GetPremium></GetPremium></PrivateRoute>
+           
+           }
            
         
         

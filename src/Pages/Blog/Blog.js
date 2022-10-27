@@ -8,7 +8,7 @@ const Blog=()=>{
     return(
         <div>
      <Card>
-      <Card.Header className="text-center" style={{backgroundColor:"#54B435",color:"#fff"}}><h2>Some Usefull Question for gain knowledge</h2></Card.Header>
+      <Card.Header className="text-center" style={{backgroundColor:"#54B435",color:"#fff"}}><h2>Some Useful Questions </h2></Card.Header>
       <Card.Body>
         <Card.Title ><h2> What is cors ?</h2></Card.Title>
         <Card.Text>
@@ -28,7 +28,7 @@ All assets for a site must come from the same origin.
       </Card.Body>
       <hr></hr>
       <Card.Body>
-        <Card.Title><h2>Why are you useing firebase?What other options do you have to implement authentication?</h2></Card.Title>
+        <Card.Title><h2>Why are you using firebase?What other options do you have to implement authentication?</h2></Card.Title>
         <Card.Text>
           <p>I use firebase because</p>
           <p>Firebase was originally developed to be a realtime database, and today that is still one of its key features. The Realtime Database is essentially a cloud-hosted NoSQL database that stores data as JSON (JavaScript Object Notation) in real time. One of the key advantages for Firebase’s Realtime Database is that it works offline by using local cache on the device to store any changes made.

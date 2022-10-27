@@ -1,8 +1,9 @@
 import React from "react";
+import { Col, Row } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Image from 'react-bootstrap/Image'
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 
 
  const Catagory=({course})=>{
@@ -11,9 +12,14 @@ import { Link } from "react-router-dom";
 
     return(
         <div>
-    <Card  className=" d-flex flex-lg-row flex-column justify-content-between">
-      <Image className="w-50 w-lg-100" variant="top" src={img} />
+         
+    <Card className="my-3 my-lg-0" >
+      <Row>
+        <Col lg="6">
+      <Image  className="w-lg-50  w-100 h-100 h-lg-100" variant="top" src={img} />
       
+      </Col>
+      <Col lg="6">
       <Card.Body>
         <Card.Title><h2>{name}</h2></Card.Title>
         <Card.Text>
@@ -21,6 +27,8 @@ import { Link } from "react-router-dom";
         </Card.Text>
         <Link className="text-decoration-none" to={`/course-details/${id}`}><Button style={{backgroundColor:"#54B435"}}>More details</Button></Link>
       </Card.Body>
+      </Col>
+      </Row>
     </Card>
         </div>
     )

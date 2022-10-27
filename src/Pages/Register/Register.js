@@ -60,7 +60,7 @@ const Register=()=>{
     return(
 
         
-        <Form onSubmit={handleSubmit} style={{backgroundColor:"#54B435",padding:"20px"}}>
+        <Form  className ="w-50 mx-auto"onSubmit={handleSubmit} style={{backgroundColor:"#54B435",padding:"20px"}}>
         <Form.Text className="text-light text-center">
           <h1>Register</h1>
         </Form.Text>

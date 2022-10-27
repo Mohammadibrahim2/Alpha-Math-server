@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from "react-router-dom";
-import Logo from "../../../assets/Images/Brand-Logo.png"
+import Logo from "../../../assets/Images/Logo-Math.webp"
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 import { AuthContext } from "../../../Context/AuthProvider";
@@ -29,8 +29,8 @@ return(
       <Container>
         <Navbar.Brand >
           <div>
-            <Link className="text-decoration-none " to="/"><Image style={{height:"70px"}} className="me-2" roundedCircle src={Logo}></Image></Link>
-            <Link className="text-decoration-none " style={{color:"#54B435"}} to="/">Online learning</Link></div>
+            <Link className="text-decoration-none " to="/"><Image style={{height:"50px" ,border:"2px solid #54B435"}} className="me-2" roundedCircle src={Logo}></Image></Link>
+            <Link className="text-decoration-none " style={{color:"#54B435"}} to="/">Alpha Math</Link></div>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -47,7 +47,7 @@ return(
               {
               user?.uid ||user?.photoURL?
               <>
-              <Button onClick={handlesignout} style={{backgroundColor:"#54B435",color:"#fff"}}>Log out</Button>
+              <Button onClick={handlesignout} style={{backgroundColor:"#54B435",color:"#fff",marginRight:"5px"}}>Log out</Button>
               <Image title={user?.displayName} roundedCircle style={{height:"40px" }} src={user.photoURL}/>
               </>
               :
