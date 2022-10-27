@@ -8,12 +8,9 @@ import { GoogleAuthProvider,GithubAuthProvider } from "firebase/auth";
 import toast from 'react-hot-toast';
 
 
-
-
-
 const Login=()=>{
   
-  const [Error,setError]=useState(" ")
+  const [Error,setError]=useState('')
 
   const location=useLocation();
   const from=location.state?.from?.pathname || "/"
@@ -47,7 +44,7 @@ const navigate=useNavigate()
         
         })
 
-    }
+    };
 
     const handleGoogleLogin=()=>{
 
@@ -66,7 +63,7 @@ const navigate=useNavigate()
       })
 
 
-    }
+    };
 
 return(
     <div>
@@ -107,8 +104,6 @@ return(
         <FaGithub  className="me-2"></FaGithub> Sign in with github
       </Button>
       </Form.Group>
-
-     
     </Form>
     </div>
 )
