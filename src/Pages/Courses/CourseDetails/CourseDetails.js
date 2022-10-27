@@ -53,7 +53,7 @@ return(
         
       </Card.Body>
       <diV className="d-flex jusstify-content-lg-between flex-lg-row flex-column">
-      <Link to="/getPremium"><Button style={{backgroundColor:"#54B435",width:"100%"}} >Get premium access</Button></Link>
+      <Link to={`/getPremium/${id}`}><Button style={{backgroundColor:"#54B435",width:"100%"}} >Get premium access</Button></Link>
         <Button onClick={generateDownload} style={{backgroundColor:"#fff",border:"1px solid #54B435"}}>
         <FaDownload style={{color:"#54B435",outline:"none"}}></FaDownload><span style={{color:"#54B435"}}>Download</span> </Button>
       

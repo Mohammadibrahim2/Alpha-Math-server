@@ -1,12 +1,16 @@
 import React from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import toast from 'react-hot-toast';
 
 
 
 const GetPremium=()=>{
+    const Topic=useLoaderData()
+
+    console.log(Topic)
+
     const success=()=>{
         toast.success("Thank you! You can visit now ")
     }
@@ -19,7 +23,7 @@ const GetPremium=()=>{
       <Card.Body>
         <Card.Title></Card.Title>
         <Card.Text className="my-4">
-            <h2>Do you want to continue?</h2>
+            <h2>Do you want to continue in<span style={{color:"#54B435"}} > {Topic.tittle}  ?</span></h2>
           
         </Card.Text>
         <div className="my-4">
