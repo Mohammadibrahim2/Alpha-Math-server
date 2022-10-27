@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
     return(
         <div>
     <Card  className=" d-flex flex-lg-row flex-column justify-content-between">
-      <Image className="w-50 w-lg 100" variant="top" src={img} />
+      <Image className="w-50 w-lg-100" variant="top" src={img} />
       
       <Card.Body>
         <Card.Title><h2>{name}</h2></Card.Title>

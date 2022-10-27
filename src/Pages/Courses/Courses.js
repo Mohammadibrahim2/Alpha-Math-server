@@ -38,7 +38,7 @@ import Catagory from "./Catagory/Catagory";
            courses.map(course=>
        <ListGroup>
       <ListGroup.Item className="mb-2 "style={{backgroundColor:"#54B435"}}>
-           <Link className="text-white text-decoration-none " to="/">{course.name}</Link>
+           <Link className="text-white text-decoration-none " to={`/course-details/${course.id}`}>{course.name}</Link>
            </ListGroup.Item>
     </ListGroup>)
           }

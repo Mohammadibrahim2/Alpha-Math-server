@@ -60,10 +60,10 @@ return(
               }
               
             </Nav.Link>
-            <Nav.Link eventKey={2} style={{border:"1px solid #54B435",padding:"5px",borderRadius:"50%"}}>
+            <Nav.Link eventKey={2}>
               {
               user?.photoURL?
-              <Image title={user?.displayName} roundedCircle style={{height:"50px" }} src={user.photoURL}/>
+              <Image title={user?.displayName} roundedCircle style={{height:"40px" }} src={user.photoURL}/>
               :
               <FaUser></FaUser>
               

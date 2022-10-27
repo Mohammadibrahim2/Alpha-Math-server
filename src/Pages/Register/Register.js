@@ -3,10 +3,11 @@ import React, { useContext } from "react";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { FaGithub ,FaGoogle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthProvider";
 
 const Register=()=>{
+  const navigate=useNavigate()
   
   const GoogleProvider = new GoogleAuthProvider();
   const {createUser,Providerlogin,updateuserprofile}=useContext(AuthContext)
@@ -25,6 +26,7 @@ const Register=()=>{
         .then(result=>{
             const user=result.user
             console.log(user)
+            navigate("/")
             handleProfileinfo(name,photoURL)
 
         })
