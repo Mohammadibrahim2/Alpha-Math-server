@@ -10,6 +10,7 @@ import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 import { AuthContext } from "../../../Context/AuthProvider";
 import DarkMood from "../../Darkmood/DarkMood";
+import DarkLightMood from "../DarkLightMood/DarkLightMood";
 
 
 
@@ -45,7 +46,7 @@ return(
            
           </Nav>
           <Nav className="d-flex align-items-center">
-            <DarkMood></DarkMood>
+            <DarkLightMood></DarkLightMood>
             <Nav.Link >
               
               {
