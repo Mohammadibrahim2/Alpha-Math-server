@@ -45,6 +45,11 @@ export const routes=createBrowserRouter([
             element:<CourseDetails></CourseDetails>,
             loader:({params})=>fetch(`http://localhost:5000/courseDetails/${params.id}`)
            },
+           
+           {
+            path:"*",
+            element:<ErrorPage></ErrorPage>
+          }
         
         
         
