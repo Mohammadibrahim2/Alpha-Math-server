@@ -34,7 +34,7 @@ return(
         </Card.Text>
         </Col>
         </Row>
-        <Button >more information</Button>
+        <Button >Get premium access</Button>
       </Card.Body>
     </Card>
 
