@@ -8,6 +8,7 @@ import Blog from "../Pages/Blog/Blog";
 import Courses from "../Pages/Courses/Courses";
 import CourseDetails from "../Pages/Courses/CourseDetails/CourseDetails";
 import PrivateRoute from "../Pages/Private/PrivateRoute";
+import FAQ from "../Pages/FAQ/FAQ";
 
 
 
@@ -30,6 +31,10 @@ export const routes=createBrowserRouter([
            {
              path:"/register",
              element:<Register></Register>
+           },
+           {
+            path:"/faq",
+            element:<FAQ></FAQ>
            },
           {
             path:"/blog",

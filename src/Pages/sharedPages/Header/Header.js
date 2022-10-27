@@ -4,12 +4,9 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from "react-router-dom";
 import Logo from "../../../assets/Images/Brand-Logo.png"
-
-import { FaUser } from 'react-icons/fa';
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 import { AuthContext } from "../../../Context/AuthProvider";
-import DarkMood from "../../Darkmood/DarkMood";
 import DarkLightMood from "../DarkLightMood/DarkLightMood";
 
 
@@ -21,10 +18,8 @@ const Header=()=>{
   const handlesignout=()=>{
     logOut()
     .then(()=>{})
-
-
   }
-  console.log(user)
+  
 
 return(
     <div>
@@ -41,7 +36,7 @@ return(
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link><Link className="text-decoration-none " to="/courses"style={{color:"#54B435"}}>Courses</Link></Nav.Link>
-            <Nav.Link href="#pricing"style={{color:"#54B435"}}>FAQ</Nav.Link>
+            <Nav.Link> <Link className="text-decoration-none " to="/faq" style={{color:"#54B435"}}>FAQ</Link></Nav.Link>
             <Nav.Link><Link className="text-decoration-none " to="/blog"style={{color:"#54B435"}}>Blog</Link></Nav.Link>
            
           </Nav>
