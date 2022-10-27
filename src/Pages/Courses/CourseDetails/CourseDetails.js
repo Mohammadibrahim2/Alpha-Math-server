@@ -18,7 +18,7 @@ return(
         <Card.Text>
          <p>{details}</p>
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Button >For more Details</Button>
       </Card.Body>
     </Card>
 
