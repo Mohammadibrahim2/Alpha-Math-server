@@ -50,26 +50,20 @@ return(
             <Nav.Link >
               
               {
-              user?.uid?
+              user?.uid ||user?.photoURL?
               <>
               <Button onClick={handlesignout} style={{backgroundColor:"#54B435",color:"#fff"}}>Log out</Button>
+              <Image title={user?.displayName} roundedCircle style={{height:"40px" }} src={user.photoURL}/>
               </>
               :
               <>
-              <Button style={{backgroundColor:"transparent",border:"1px solid #54B435 "}} ><Link className="text-decoration-none " to="/login"style={{color:"#54B435"}}>Log in</Link></Button>
+              <Button style={{backgroundColor:"transparent",border:"1px solid #54B435 "}} >
+                <Link className="text-decoration-none " to="/login"style={{color:"#54B435"}}>Log in</Link></Button>
               </>    
               }
               
             </Nav.Link>
-            <Nav.Link eventKey={2}>
-              {
-              user?.photoURL?
-              <Image title={user?.displayName} roundedCircle style={{height:"40px" }} src={user.photoURL}/>
-              :
-              <FaUser></FaUser>
-              
-            }
-            </Nav.Link>
+          
           </Nav>
          
         </Navbar.Collapse>

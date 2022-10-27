@@ -8,7 +8,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import Catagory from "./Catagory/Catagory";
  const Courses=()=>{
   const courses=useLoaderData()
-  console.log(courses)
+ 
     return(
        
          
