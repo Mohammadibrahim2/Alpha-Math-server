@@ -35,7 +35,6 @@ import Catagory from "./Catagory/Catagory";
      
      </Col>
         <Col lg="3" className="text-center">
-          <div>
        <ListGroup.Item className="my-4 "style={{backgroundColor:"#fff",color:"#54B435",border:"1px solid #54B435"}}><h2>Category</h2> </ListGroup.Item>
 
         
@@ -48,7 +47,7 @@ import Catagory from "./Catagory/Catagory";
     </ListGroup>)
           }
       
-         </div>
+         
         </Col>
        
       </Row>

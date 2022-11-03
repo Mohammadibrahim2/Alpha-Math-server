@@ -7,9 +7,9 @@ import { initializeApp } from "firebase/app";
 const firebaseConfig = {
   apiKey: "AIzaSyBbXscrG445s4_h87lOEbrgxoZf_rjEniA",
   authDomain:process.env.REACT_APP_authDomain,
-  projectId:process.env.REACT_APP_projectId,
+  projectId: process.env.REACT_APP_projectId,
   storageBucket: process.env.REACT_APP_storageBucket,
-  messagingSenderId:process.env.REACT_APP_messagingSenderId,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
   appId: process.env.REACT_APP_appId
 };
 

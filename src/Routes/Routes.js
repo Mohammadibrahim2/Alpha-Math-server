@@ -44,17 +44,17 @@ export const routes=createBrowserRouter([
            {
             path:"/courses",
             element:<Courses></Courses>,
-            loader:()=>fetch("http://localhost:5000/courses")
+            loader:()=>fetch("https://alpha-math-9vmzx3qsk-mohammadibrahim2.vercel.app/courses")
            },
            {
             path:"/course-details/:id",
             element:<CourseDetails></CourseDetails>,
-            loader:({params})=>fetch(`http://localhost:5000/courseDetails/${params.id}`)
+            loader:({params})=>fetch(`https://alpha-math-9vmzx3qsk-mohammadibrahim2.vercel.app/courseDetails/${params.id}`)
            },
            {
             path:"/getPremium/:id",
             element:<PrivateRoute><GetPremium></GetPremium></PrivateRoute>,
-            loader:({params})=>fetch(`http://localhost:5000/Topic/${params.id}`)
+            loader:({params})=>fetch(`https://alpha-math-9vmzx3qsk-mohammadibrahim2.vercel.app/Topic/${params.id}`)
            
            }
            
