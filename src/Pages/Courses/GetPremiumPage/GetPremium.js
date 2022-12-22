@@ -3,10 +3,14 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link, useLoaderData } from "react-router-dom";
 import toast from 'react-hot-toast';
+import { useContext } from "react";
+import { DarkMood } from "../../Darkmood/DarkLightTemplete.js/Dark";
 
 
 
 const GetPremium=()=>{
+
+    const{dark}=useContext(DarkMood)
     const Topic=useLoaderData()
 
     console.log(Topic)
@@ -17,21 +21,21 @@ const GetPremium=()=>{
    
 
     return(
-        <div className="d-flex justify-content-center text-center align-items-center" >
-   <Card className="w-75 w-lg-50 mx-auto ">
+        <div className="flex  justify-content-center text-center align-items-center my-4" >
+   <div className={`${dark?"bg-slate-700":"bg-gray-300"} w-full lg:w-2/3 mx-auto px-4 bg-white`}>
       
-      <Card.Body>
-        <Card.Title></Card.Title>
-        <Card.Text className="my-4">
-            <h2>Do you want to continue in<span style={{color:"#54B435"}} > {Topic.tittle}  ?</span></h2>
-          
-        </Card.Text>
+      <div className="my-5">
+       
         <div className="my-4">
-       <Link to="/" ><Button  variant="danger px-3" >Cancel</Button></Link>
-       <Link ><Button onClick={success}style={{backgroundColor:"#54B435",marginLeft:"10px"}}>Get in</Button></Link>
+            <h2 className="font-bold">Do you want to continue in<span className="text-teal-500"> {Topic.tittle}  ?</span></h2>
+          
+        </div>
+        <div className="my-4">
+       <Link to="/" ><button  className="text-xl border rounded-md px-4 py-2 bg-red-600 text-white" >Cancel</button></Link>
+       <Link ><button onClick={success} className="text-xl border rounded-md px-4 py-2 bg-green-800 text-white" style={{backgroundColor:"#54B435",marginLeft:"10px"}}>Get in</button></Link>
        </div>
-      </Card.Body>
-    </Card>
+      </div>
+    </div>
          
         </div>
     )

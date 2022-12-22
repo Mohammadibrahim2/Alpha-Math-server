@@ -13,9 +13,9 @@ const Main=()=>{
 
 return(
 
-<div>
+<div className="mx-auto">
 <Header></Header>
-    <Container>
+    <Container className="mx-auto">
    
         <Row> 
             <Col lg="12">

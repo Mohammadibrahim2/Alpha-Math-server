@@ -28,38 +28,46 @@ const CourseDetails=()=>{
 return(
     
       
-    <Card  calssName="p-4 m-50 mx-auto"style={{padding :"50px 0" }}>
+    <div className="lg:w-[600px] w-full mx-auto my-3 "style={{backgroundColor:"#fff",padding:"20px"}}>
     
-     <h2>{tittle}</h2>
-      <Card.Body  className="content px-4">
-      <Card.Img style={{height:"300px"}} src={img} />
+    
+      <div  className="content px-4  ">
+      <h2 className="px-4 text-blue-900">{tittle}</h2>
+      <img className="w-full "  style={{height:"300px"}} src={img} />
       <Card.Title ><h5 calssName="px-3">{subtittle}</h5></Card.Title>
-      <Row>
-        <Col lg="4">
-          <h4>{concepts}</h4>
+      <div className="w-full flex flex-row">
+        <div className="w-1/3">
+        <h4>{concepts}</h4>
           {
             catagories.map(catagory=><li>{catagory}</li>)
           }
 
 
-        </Col>
-        <Col lg="8">
-        <Card.Text>
+
+        </div>
+        
+         
+        
+      
+        <div className="w-1/2">
          <p>{details}</p>
          <p>{subdetals}</p>
-        </Card.Text>
-        </Col>
-      </Row>
+        </div>
+
         
-      </Card.Body>
-      <diV className="d-flex jusstify-content-lg-between flex-lg-row flex-column">
-      <Link to={`/getPremium/${id}`}><Button style={{backgroundColor:"#54B435",width:"100%"}} >Get premium access</Button></Link>
-        <Button onClick={generateDownload} style={{backgroundColor:"#fff",border:"1px solid #54B435"}}>
-        <FaDownload style={{color:"#54B435",outline:"none"}}></FaDownload><span style={{color:"#54B435"}}>Download</span> </Button>
+       
+     
+      </div>
+        
+      </div>
+      <div className="d-flex jusstify-content-lg-between flex-lg-row flex-column">
+      <Link to={`/getPremium/${id}`}><button className="lg:ml-2 bg-blue-900 text-white px-4 py-2 bodred rounded-md" style={{backgroundColor:"",width:"100%"}} >Get premium access</button></Link>
+        <button onClick={generateDownload} className="lg:mx-4   flex flex-row  justify-center border-2 rounded-md border-blue-900 px-4 py-2" style={{backgroundColor:"#fff",border:""}}>
+        <FaDownload className="text-blue-900" ></FaDownload><span className=" font-bold text-blue-900">Download</span> </button>
       
-      </diV>
+      </div>
     
-    </Card>
+    </div>
    
 
   

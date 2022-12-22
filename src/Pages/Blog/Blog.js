@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import CourseHeader from "../Courses/CourseHeader/CourseHeader";
+import { DarkMood } from "../Darkmood/DarkLightTemplete.js/Dark";
 
 const Blog=()=>{
+  const {dark}=useContext(DarkMood)
 
 
     return(
-        <div>
-     <Card>
-      <Card.Header className="text-center" style={{backgroundColor:"#54B435",color:"#fff"}}><h2>Some Useful Questions </h2></Card.Header>
+        <div className={`${dark?"transparent":"bg-white"}`}>
+<CourseHeader props={"Our Blogs"}name={"Blogs"}></CourseHeader>
+          
+     <Card >
+      <div className="text-center text-blue-900 font-bold md:text-5xl py-2" ><h2>Some Useful Questions </h2></div>
       <Card.Body>
         <Card.Title ><h2> What is cors ?</h2></Card.Title>
         <Card.Text>

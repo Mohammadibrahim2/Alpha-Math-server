@@ -1,13 +1,17 @@
-import React, { useContext } from "react";
+import React, { useContext,useState } from "react";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from "react-router-dom";
-import Logo from "../../../assets/Images/Logo-Math.webp"
+import { FiMoon } from "react-icons/fi";
+import {FiSun } from "react-icons/fi";
+
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 import { AuthContext } from "../../../Context/AuthProvider";
 import DarkLightMood from "../DarkLightMood/DarkLightMood";
+import { DarkMood } from "../../Darkmood/DarkLightTemplete.js/Dark";
+import imagee from "../../../assets/Images/logo2-removebg-preview.png"
 
 
 
@@ -20,40 +24,53 @@ const Header=()=>{
     .then(()=>{})
   }
   
+  const {dark,setDark}=useContext(DarkMood)
+
 
 return(
-    <div>
 
 
-      <Navbar collapseOnSelect className="mb-4" expand="lg" bg="light" variant="light"sticky="top">
+
+    <div className={`${dark?"bg-gray-900":"bg-white"} py-2`}>
+
+
+      <Navbar collapseOnSelect className="mb-2" expand="lg"  sticky="top">
       <Container>
         <Navbar.Brand >
-          <div>
-            <Link className="text-decoration-none " to="/"><Image style={{height:"50px" ,border:"2px solid #54B435"}} className="me-2" roundedCircle src={Logo}></Image></Link>
-            <Link className="text-decoration-none " style={{color:"#54B435"}} to="/">Alpha Math</Link></div>
+          <div className="flex flex-row justify-center items-center">
+            <Link className="text-decoration-none " to="/">
+             <img className="h-[70px] w-[70px]" src={imagee}/>
+            </Link>
+            <Link className={`text-decoration-none text-2xl ${dark?"text-white":"text-teal-500"}  `} to="/">Alpha Math</Link></div>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link><Link className="text-decoration-none " to="/courses"style={{color:"#54B435"}}>Courses</Link></Nav.Link>
-            <Nav.Link> <Link className="text-decoration-none " to="/faq" style={{color:"#54B435"}}>FAQ</Link></Nav.Link>
-            <Nav.Link><Link className="text-decoration-none " to="/blog"style={{color:"#54B435"}}>Blog</Link></Nav.Link>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav " />
+        <Navbar.Collapse id="responsive-navbar-nav" >
+          <Nav className="me-auto ">
+            <Nav.Link><Link className={`text-decoration-none text-xl ${dark?"text-white":"text-teal-500"}  `} to="/courses">Courses</Link></Nav.Link>
+            <Nav.Link> <Link className={`text-decoration-none text-xl ${dark?"text-white":"text-teal-500"}  `} to="/faq" >FAQ</Link></Nav.Link>
+            <Nav.Link><Link className={`text-decoration-none text-xl ${dark?"text-white":"text-teal-500"}  `} to="/blog">Blog</Link></Nav.Link>
            
           </Nav>
           <Nav className="d-flex align-items-center">
-            <DarkLightMood></DarkLightMood>
+             <div className={`${dark?"bg-slate-100":"bg-gray-500"} text-2xl  border-2 border-blue-900 px-3 py`}>
+               {dark? <button onClick={()=>setDark(!dark)}><FiSun></FiSun></button>: <button  onClick={()=>setDark(!dark)}><FiMoon></FiMoon> </button>}
+               </div>
             <Nav.Link >
               
               {
               user?.uid ||user?.photoURL?
               <>
-              <Button onClick={handlesignout} style={{backgroundColor:"#54B435",color:"#fff",marginRight:"5px"}}>Log out</Button>
-              <Image title={user?.displayName} roundedCircle style={{height:"40px" }} src={user.photoURL}/>
+              <div className="flex flex-row justify-around items-center">
+
+              
+              <button onClick={handlesignout} className={`px-3 py-2 font-semibold ${dark?"bg-slate-100 text-black":"bg-blue-900"}`} style={{backgroundColor:"",color:"#fff"}}>Log out</button>
+              <Image title={user?.displayName} roundedCircle style={{height:"45px",width:"45px",marginLeft:"2px" }} src={user.photoURL}/>
+              </div>
               </>
               :
               <>
-              <Button style={{backgroundColor:"transparent",border:"1px solid #54B435 "}} >
-                <Link className="text-decoration-none " to="/login"style={{color:"#54B435"}}>Log in</Link></Button>
+              <button  className={`px-3 py-2  ${dark?"bg-white ":"bg-gray-700 "}`}>
+                <Link className={`text-decoration-none font-semibold ${dark?"text-black":"text-white"}  `} to="/login">Log in</Link></button>
               </>    
               }
               

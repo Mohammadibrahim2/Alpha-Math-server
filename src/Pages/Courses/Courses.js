@@ -6,20 +6,22 @@ import ListGroup from 'react-bootstrap/ListGroup';
 
 import { Link, useLoaderData } from "react-router-dom";
 import Catagory from "./Catagory/Catagory";
+import CourseHeader from "./CourseHeader/CourseHeader";
  const Courses=()=>{
   const courses=useLoaderData()
  
     return(
-       
+       <>
+    <CourseHeader props={"Our Courses"}name={"Courses"}></CourseHeader>
          
-         <Container>
+      <Container className="top-0 ">
       <Row>
 
     <Col lg="9">
-    <h1 className="text-center my-4"style={{color:"#54B435"}}>Courses</h1>
+   
 
-    <div className="container text-center">
-  <div className="row row-cols-lg-2 row-cols-1 ">
+    <div className=" text-center">
+  <div className="row row-cols-lg-3 row-cols-md-2 row-cols-1  ">
     
      {
     courses.map(course=><Catagory
@@ -34,14 +36,14 @@ import Catagory from "./Catagory/Catagory";
 
      
      </Col>
-        <Col lg="3" className="text-center">
-       <ListGroup.Item className="my-4 "style={{backgroundColor:"#fff",color:"#54B435",border:"1px solid #54B435"}}><h2>Category</h2> </ListGroup.Item>
+        <Col lg="2" className="text-center">
+       <ListGroup.Item className="my-4 "style={{backgroundColor:"transparent",color:"teal",border:"2px solid teal" }}><h2>Category</h2> </ListGroup.Item>
 
         
          {
            courses.map(course=>
        <ListGroup>
-      <ListGroup.Item className="mb-2 "style={{backgroundColor:"#54B435"}}>
+      <ListGroup.Item className="mb-2  "style={{backgroundColor:"teal"}}>
         <Link className="text-white text-decoration-none " to={`/course-details/${course.id}`}>{course.name}</Link>
       </ListGroup.Item>
     </ListGroup>)
@@ -54,7 +56,7 @@ import Catagory from "./Catagory/Catagory";
       </Container>
          
    
-  
+      </>
         
     )
 

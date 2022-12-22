@@ -6,33 +6,30 @@ import Image from 'react-bootstrap/Image'
 import { Link, Route } from "react-router-dom";
 
 
- const Catagory=({course})=>{
- 
-    const {id,name,summary,img}=course
+const Catagory = ({ course }) => {
 
-    return(
-        <div>
-         
-    <Card className="my-3 my-lg-0" >
-      <Row>
-        <Col lg="6">
-      <Image  className="w-lg-50  w-100 h-100 h-lg-100" variant="top" src={img} />
-      
-      </Col>
-      <Col lg="6">
-      <Card.Body>
-        <Card.Title><h2>{name}</h2></Card.Title>
-        <Card.Text>
-          <p>{summary}</p>
-        </Card.Text>
-        <Link className="text-decoration-none" to={`/course-details/${id}`}><Button style={{backgroundColor:"#54B435"}}>More details</Button></Link>
-      </Card.Body>
-      </Col>
-      </Row>
-    </Card>
+  const { id, name, summary, img } = course
+
+  return (
+    <div>
+      <div className="card bg-base-100 shadow-xl md:h-[350px]">
+       <img  className="md:h-[180px]" src={img} alt="Shoes" />
+        <div className="card-body">
+          <h2 className="card-title text-blue-900 font-bold">{name}</h2>
+          <p className=" text-left text-black">{summary}</p>
+          <div className="card-actions justify-start">
+            <Link className="text-decoration-none" to={`/course-details/${id}`}><Button style={{ backgroundColor: "teal" }}>More details</Button></Link>
+          </div>
         </div>
-    )
+      </div>
 
 
- }
- export default Catagory
+
+
+
+    </div>
+  )
+
+
+}
+export default Catagory
